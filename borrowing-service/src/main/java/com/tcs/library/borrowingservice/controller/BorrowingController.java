@@ -14,12 +14,12 @@ public class BorrowingController {
     private BorrowingServiceRepository borrowingRepository;
 
     @GetMapping
-    public List<BorrowingRecord> getAllAuthors() {
+    public List<BorrowingRecord> getAllBorrowingRecords() {
         return borrowingRepository.findAll();
     }
 
     @PostMapping
-    public BorrowingRecord createAuthor(@RequestBody BorrowingRecord book) {
+    public BorrowingRecord createBorrowingRecord(@RequestBody BorrowingRecord book) {
         return borrowingRepository.save(book);
     }
 }

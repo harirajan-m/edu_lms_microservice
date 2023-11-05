@@ -14,28 +14,28 @@ public class BookController {
     private BookRepository bookRepository;
 
     @GetMapping
-    public List<Book> getAllAuthors() {
+    public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
 
     @PostMapping
-    public Book createAuthor(@RequestBody Book book) {
+    public Book createBook(@RequestBody Book book) {
         return bookRepository.save(book);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteAuthor(@PathVariable Long id) {
+    public void deleteBook(@PathVariable Long id) {
         bookRepository.deleteById(id);
     }
 
 
     @GetMapping("/{id}")
-    public Book getAuthor(@PathVariable Long id) {
+    public Book getBook(@PathVariable Long id) {
         return bookRepository.findById(id).get();
     }
 
     @PutMapping("/{id}")
-    public Book updateAuthor(@PathVariable Long id, @RequestBody Book book) {
+    public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
         return bookRepository.save(book);
     }
 }
