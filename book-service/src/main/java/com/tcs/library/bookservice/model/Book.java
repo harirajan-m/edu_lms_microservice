@@ -16,7 +16,3 @@ public class Book {
     private BookStatus status;
 }
 
-enum BookStatus {
-    AVAILABLE,
-    BORROWED
-}
